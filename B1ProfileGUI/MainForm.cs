@@ -92,6 +92,11 @@ namespace B1ProfileGUI
 			ProfileFilePath = null;
 			ProfileDirty = false;
 
+			GoldenKeysTotalInput.Maximum = Profile.MaxGoldenKeysTotal;
+
+			GoldenKeysInput.Maximum = Profile.MaxGoldenKeys;
+			GoldenKeysUsedInput.Maximum = Profile.MaxGoldenKeys;
+
 			GoldenKeysInput.KeysUsedUpDown = GoldenKeysUsedInput;
 			GoldenKeysUsedInput.KeysUpDown = GoldenKeysInput;
 		}

@@ -56,7 +56,7 @@
             this.MainMenuCloseButton});
 			this.MainMenuBar.Location = new System.Drawing.Point(0, 0);
 			this.MainMenuBar.Name = "MainMenuBar";
-			this.MainMenuBar.Size = new System.Drawing.Size(314, 25);
+			this.MainMenuBar.Size = new System.Drawing.Size(336, 25);
 			this.MainMenuBar.TabIndex = 0;
 			this.MainMenuBar.Text = "Main Menu";
 			// 
@@ -131,9 +131,9 @@
 			// MaxGoldenKeysButton
 			// 
 			this.MaxGoldenKeysButton.Enabled = false;
-			this.MaxGoldenKeysButton.Location = new System.Drawing.Point(38, 140);
+			this.MaxGoldenKeysButton.Location = new System.Drawing.Point(222, 97);
 			this.MaxGoldenKeysButton.Name = "MaxGoldenKeysButton";
-			this.MaxGoldenKeysButton.Size = new System.Drawing.Size(141, 23);
+			this.MaxGoldenKeysButton.Size = new System.Drawing.Size(100, 23);
 			this.MaxGoldenKeysButton.TabIndex = 4;
 			this.MaxGoldenKeysButton.Text = "Max Golden Keys";
 			this.MaxGoldenKeysButton.UseVisualStyleBackColor = true;
@@ -144,11 +144,6 @@
 			this.GoldenKeysTotalInput.BackColor = System.Drawing.SystemColors.Control;
 			this.GoldenKeysTotalInput.Enabled = false;
 			this.GoldenKeysTotalInput.Location = new System.Drawing.Point(132, 98);
-			this.GoldenKeysTotalInput.Maximum = new decimal(new int[] {
-            B1Profile.Profile.MaxGoldenKeysTotal,
-            0,
-            0,
-            0});
 			this.GoldenKeysTotalInput.Name = "GoldenKeysTotalInput";
 			this.GoldenKeysTotalInput.Size = new System.Drawing.Size(81, 20);
 			this.GoldenKeysTotalInput.TabIndex = 3;
@@ -158,11 +153,6 @@
 			// 
 			this.GoldenKeysUsedInput.Enabled = false;
 			this.GoldenKeysUsedInput.Location = new System.Drawing.Point(132, 63);
-			this.GoldenKeysUsedInput.Maximum = new decimal(new int[] {
-            B1Profile.Profile.MaxGoldenKeys,
-            0,
-            0,
-            0});
 			this.GoldenKeysUsedInput.Name = "GoldenKeysUsedInput";
 			this.GoldenKeysUsedInput.Size = new System.Drawing.Size(81, 20);
 			this.GoldenKeysUsedInput.TabIndex = 2;
@@ -172,11 +162,6 @@
 			// 
 			this.GoldenKeysInput.Enabled = false;
 			this.GoldenKeysInput.Location = new System.Drawing.Point(132, 36);
-			this.GoldenKeysInput.Maximum = new decimal(new int[] {
-            B1Profile.Profile.MaxGoldenKeys,
-            0,
-            0,
-            0});
 			this.GoldenKeysInput.Name = "GoldenKeysInput";
 			this.GoldenKeysInput.Size = new System.Drawing.Size(81, 20);
 			this.GoldenKeysInput.TabIndex = 1;
@@ -186,7 +171,7 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(314, 217);
+			this.ClientSize = new System.Drawing.Size(336, 136);
 			this.Controls.Add(this.MaxGoldenKeysButton);
 			this.Controls.Add(this.GoldenKeysTotalInput);
 			this.Controls.Add(this.GoldenKeysTotalLabel);
