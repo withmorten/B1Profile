@@ -211,10 +211,10 @@ namespace B1ProfileGUI
 			switch (MessageBox.Show("This will set golden keys to max, do you want to continue?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
 			{
 			case DialogResult.Yes:
-				GoldenKeysInput.Value = 999;
+				GoldenKeysInput.Value = Profile.MaxGoldenKeys;
 				GoldenKeysUsedInput.Value = 0;
 
-				GoldenKeysTotalInput.Value = 999;
+				GoldenKeysTotalInput.Value = Profile.MaxGoldenKeysTotal;
 
 				ProfileDirty = true;
 

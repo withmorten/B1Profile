@@ -158,6 +158,9 @@ namespace B1Profile
 
 		private Entry[] Entries;
 
+		public const int MaxGoldenKeys = 999;
+		public const int MaxGoldenKeysTotal = MaxGoldenKeys;
+
 		public int NumGoldenKeys;
 		public int NumGoldenKeysUsed;
 

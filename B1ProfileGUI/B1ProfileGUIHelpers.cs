@@ -155,7 +155,7 @@ namespace B1ProfileGUI
 
 				Program.MainForm.ProfileDirty = true;
 
-				if (Program.MainForm.GoldenKeysInput.Value < 999)
+				if (Program.MainForm.GoldenKeysInput.Value < Profile.MaxGoldenKeys)
 				{
 					Program.MainForm.GoldenKeysInput.Inc();
 
@@ -191,7 +191,7 @@ namespace B1ProfileGUI
 					return;
 				}
 
-				if (Program.MainForm.GoldenKeysUsedInput.Value < 999)
+				if (Program.MainForm.GoldenKeysUsedInput.Value < Profile.MaxGoldenKeys)
 				{
 					Program.MainForm.GoldenKeysUsedInput.Inc();
 

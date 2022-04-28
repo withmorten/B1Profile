@@ -145,7 +145,7 @@
 			this.GoldenKeysTotalInput.Enabled = false;
 			this.GoldenKeysTotalInput.Location = new System.Drawing.Point(132, 98);
 			this.GoldenKeysTotalInput.Maximum = new decimal(new int[] {
-            999,
+            B1Profile.Profile.MaxGoldenKeysTotal,
             0,
             0,
             0});
@@ -159,7 +159,7 @@
 			this.GoldenKeysUsedInput.Enabled = false;
 			this.GoldenKeysUsedInput.Location = new System.Drawing.Point(132, 63);
 			this.GoldenKeysUsedInput.Maximum = new decimal(new int[] {
-            999,
+            B1Profile.Profile.MaxGoldenKeys,
             0,
             0,
             0});
@@ -173,7 +173,7 @@
 			this.GoldenKeysInput.Enabled = false;
 			this.GoldenKeysInput.Location = new System.Drawing.Point(132, 36);
 			this.GoldenKeysInput.Maximum = new decimal(new int[] {
-            999,
+            B1Profile.Profile.MaxGoldenKeys,
             0,
             0,
             0});
