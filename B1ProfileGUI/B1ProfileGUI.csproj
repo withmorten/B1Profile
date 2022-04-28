@@ -54,9 +54,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="B1ProfileGUIHelpers.cs">
-      <SubType>Component</SubType>
-    </Compile>
+    <Compile Include="B1ProfileGUIHelpers.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
