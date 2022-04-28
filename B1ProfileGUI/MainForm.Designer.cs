@@ -28,18 +28,16 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
 			this.MainMenuBar = new System.Windows.Forms.ToolStrip();
 			this.MainMenuOpenButton = new System.Windows.Forms.ToolStripButton();
 			this.MainMenuSaveButton = new System.Windows.Forms.ToolStripButton();
 			this.MainMenuAboutButton = new System.Windows.Forms.ToolStripButton();
 			this.MainMenuCloseButton = new System.Windows.Forms.ToolStripButton();
-			this.SyncedModeToolTip = new System.Windows.Forms.ToolTip(this.components);
-			this.IgnoreBonusStatLabelToolTip = new System.Windows.Forms.ToolTip(this.components);
-			this.BadassTokensUsedToolTip = new System.Windows.Forms.ToolTip(this.components);
-			this.RandomQuoteLabel = new System.Windows.Forms.Label();
+			this.NumGoldenKeysLabel = new System.Windows.Forms.Label();
+			this.NumGoldenKeysInput = new B1ProfileGUI.NumGoldenKeysUpDown();
 			this.MainMenuBar.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.NumGoldenKeysInput)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// MainMenuBar
@@ -51,7 +49,7 @@
             this.MainMenuCloseButton});
 			this.MainMenuBar.Location = new System.Drawing.Point(0, 0);
 			this.MainMenuBar.Name = "MainMenuBar";
-			this.MainMenuBar.Size = new System.Drawing.Size(758, 25);
+			this.MainMenuBar.Size = new System.Drawing.Size(314, 25);
 			this.MainMenuBar.TabIndex = 0;
 			this.MainMenuBar.Text = "Main Menu";
 			// 
@@ -96,38 +94,37 @@
 			this.MainMenuCloseButton.Text = "Close";
 			this.MainMenuCloseButton.Click += new System.EventHandler(this.MainMenuCloseButton_Click);
 			// 
-			// SyncedModeToolTip
+			// NumGoldenKeysLabel
 			// 
-			this.SyncedModeToolTip.AutoPopDelay = 10000;
-			this.SyncedModeToolTip.InitialDelay = 100;
-			this.SyncedModeToolTip.ReshowDelay = 100;
+			this.NumGoldenKeysLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+			this.NumGoldenKeysLabel.AutoSize = true;
+			this.NumGoldenKeysLabel.Location = new System.Drawing.Point(122, 34);
+			this.NumGoldenKeysLabel.Name = "NumGoldenKeysLabel";
+			this.NumGoldenKeysLabel.Size = new System.Drawing.Size(70, 13);
+			this.NumGoldenKeysLabel.TabIndex = 1;
+			this.NumGoldenKeysLabel.Text = "Golden Keys:";
 			// 
-			// IgnoreBonusStatLabelToolTip
+			// NumGoldenKeysInput
 			// 
-			this.IgnoreBonusStatLabelToolTip.AutoPopDelay = 10000;
-			this.IgnoreBonusStatLabelToolTip.InitialDelay = 100;
-			this.IgnoreBonusStatLabelToolTip.ReshowDelay = 100;
-			// 
-			// BadassTokensUsedToolTip
-			// 
-			this.BadassTokensUsedToolTip.AutoPopDelay = 10000;
-			this.BadassTokensUsedToolTip.InitialDelay = 100;
-			this.BadassTokensUsedToolTip.ReshowDelay = 100;
-			// 
-			// RandomQuoteLabel
-			// 
-			this.RandomQuoteLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.RandomQuoteLabel.Location = new System.Drawing.Point(12, 547);
-			this.RandomQuoteLabel.Name = "RandomQuoteLabel";
-			this.RandomQuoteLabel.Size = new System.Drawing.Size(437, 13);
-			this.RandomQuoteLabel.TabIndex = 0;
+			this.NumGoldenKeysInput.Anchor = System.Windows.Forms.AnchorStyles.None;
+			this.NumGoldenKeysInput.Enabled = false;
+			this.NumGoldenKeysInput.Location = new System.Drawing.Point(138, 59);
+			this.NumGoldenKeysInput.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+			this.NumGoldenKeysInput.Name = "NumGoldenKeysInput";
+			this.NumGoldenKeysInput.Size = new System.Drawing.Size(38, 20);
+			this.NumGoldenKeysInput.TabIndex = 2;
 			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(758, 580);
-			this.Controls.Add(this.RandomQuoteLabel);
+			this.ClientSize = new System.Drawing.Size(314, 100);
+			this.Controls.Add(this.NumGoldenKeysLabel);
+			this.Controls.Add(this.NumGoldenKeysInput);
 			this.Controls.Add(this.MainMenuBar);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -139,6 +136,7 @@
 			this.Load += new System.EventHandler(this.MainForm_Load);
 			this.MainMenuBar.ResumeLayout(false);
 			this.MainMenuBar.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.NumGoldenKeysInput)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -150,9 +148,7 @@
 		private System.Windows.Forms.ToolStripButton MainMenuAboutButton;
 		private System.Windows.Forms.ToolStripButton MainMenuCloseButton;
 		private System.Windows.Forms.ToolStrip MainMenuBar;
-		private System.Windows.Forms.ToolTip SyncedModeToolTip;
-		private System.Windows.Forms.ToolTip IgnoreBonusStatLabelToolTip;
-		private System.Windows.Forms.ToolTip BadassTokensUsedToolTip;
-		private System.Windows.Forms.Label RandomQuoteLabel;
+		private System.Windows.Forms.Label NumGoldenKeysLabel;
+		private B1ProfileGUI.NumGoldenKeysUpDown NumGoldenKeysInput;
 	}
 }

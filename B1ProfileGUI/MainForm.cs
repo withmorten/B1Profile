@@ -17,12 +17,12 @@ namespace B1ProfileGUI
 
 		public void TransferFromProfile()
 		{
-			
+			NumGoldenKeysInput.Value = Program.Profile.NumGoldenKeys;
 		}
 
 		public void TransferToProfile()
 		{
-			
+			Program.Profile.NumGoldenKeys = (int)NumGoldenKeysInput.Value;
 		}
 
 		private void LoadProfile()
@@ -46,6 +46,8 @@ namespace B1ProfileGUI
 		private void EnableGUI()
 		{
 			MainMenuSaveButton.Enabled = true;
+
+			NumGoldenKeysInput.Enabled = true;
 		}
 
 		protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
