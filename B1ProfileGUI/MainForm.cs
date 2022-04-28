@@ -21,6 +21,9 @@ namespace B1ProfileGUI
 			GoldenKeysUsedInput.Value = Program.Profile.NumGoldenKeysUsed;
 
 			GoldenKeysTotalInput.Value = GoldenKeysInput.Value - GoldenKeysUsedInput.Value;
+
+			GoldenKeysInput.PrevValue = GoldenKeysInput.Value;
+			GoldenKeysUsedInput.PrevValue = GoldenKeysUsedInput.Value;
 		}
 
 		public void TransferToProfile()
@@ -34,9 +37,6 @@ namespace B1ProfileGUI
 			Program.Profile = new Profile(ProfileFilePath);
 
 			TransferFromProfile();
-
-			GoldenKeysInput.PrevValue = GoldenKeysInput.Value;
-			GoldenKeysUsedInput.PrevValue = GoldenKeysUsedInput.Value;
 		}
 
 		private void SaveProfile()
