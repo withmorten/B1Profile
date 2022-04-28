@@ -17,12 +17,16 @@ namespace B1ProfileGUI
 
 		public void TransferFromProfile()
 		{
-			NumGoldenKeysInput.Value = Program.Profile.NumGoldenKeys;
+			GoldenKeysInput.Value = Program.Profile.NumGoldenKeys;
+			GoldenKeysUsedInput.Value = Program.Profile.NumGoldenKeysUsed;
+
+			GoldenKeysTotalInput.Value = GoldenKeysInput.Value - GoldenKeysUsedInput.Value;
 		}
 
 		public void TransferToProfile()
 		{
-			Program.Profile.NumGoldenKeys = (int)NumGoldenKeysInput.Value;
+			Program.Profile.NumGoldenKeys = (int)GoldenKeysInput.Value;
+			Program.Profile.NumGoldenKeysUsed = (int)GoldenKeysUsedInput.Value;
 		}
 
 		private void LoadProfile()
@@ -30,6 +34,9 @@ namespace B1ProfileGUI
 			Program.Profile = new Profile(ProfileFilePath);
 
 			TransferFromProfile();
+
+			GoldenKeysInput.PrevValue = GoldenKeysInput.Value;
+			GoldenKeysUsedInput.PrevValue = GoldenKeysUsedInput.Value;
 		}
 
 		private void SaveProfile()
@@ -47,7 +54,12 @@ namespace B1ProfileGUI
 		{
 			MainMenuSaveButton.Enabled = true;
 
-			NumGoldenKeysInput.Enabled = true;
+			GoldenKeysInput.Enabled = true;
+			GoldenKeysUsedInput.Enabled = true;
+
+			GoldenKeysTotalInput.Enabled = true;
+
+			MaxGoldenKeysButton.Enabled = true;
 		}
 
 		protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
@@ -79,6 +91,9 @@ namespace B1ProfileGUI
 			Program.Profile = null;
 			ProfileFilePath = null;
 			ProfileDirty = false;
+
+			GoldenKeysInput.KeysUsedUpDown = GoldenKeysUsedInput;
+			GoldenKeysUsedInput.KeysUpDown = GoldenKeysInput;
 		}
 
 		private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -188,6 +203,26 @@ namespace B1ProfileGUI
 			else
 			{
 				Application.Exit();
+			}
+		}
+
+		private void MaxGoldenKeysButton_Click(object sender, EventArgs e)
+		{
+			switch (MessageBox.Show("This will set golden keys to max, do you want to continue?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
+			{
+			case DialogResult.Yes:
+				GoldenKeysInput.Value = 999;
+				GoldenKeysUsedInput.Value = 0;
+
+				GoldenKeysTotalInput.Value = 999;
+
+				ProfileDirty = true;
+
+				break;
+
+			case DialogResult.No:
+
+				break;
 			}
 		}
 	}
