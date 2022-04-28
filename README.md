@@ -10,3 +10,7 @@ In this repository you will find:
 Partially reverse engineered from the previous Borderlands 2 Profile Editor by Philymaster.
 
 Also check out [B2Profile](https://github.com/withmorten/B2Profile/), which uses the same file format.
+
+Screenshot:
+
+![Screenshot of GUI](B1ProfileGUI.png)
