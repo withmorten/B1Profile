@@ -150,14 +150,16 @@ namespace B1Profile
 	{
 		public enum EntryID : uint
 		{
-			NumProfileSaved = 27,
-			FOV = 129,
-			NumGoldenKeys = 130,
+			NumProfileSaved = 27, // Int32
+			FOV = 129, // Int32
+			NumGoldenKeys = 130, // Int32
+			NumGoldenKeysUsed = 131, // Int32
 		}
 
 		private Entry[] Entries;
 
-		public int NumGoldenKeys = 0;
+		public int NumGoldenKeys;
+		public int NumGoldenKeysUsed;
 
 		public Profile()
 		{
@@ -268,7 +270,7 @@ namespace B1Profile
 			return true;
 		}
 
-		public ref Entry GetEntryFromID(uint ID)
+		public ref Entry GetEntry(uint ID)
 		{
 			for (int i = 0; i < Entries.Length; i++)
 			{
@@ -278,9 +280,9 @@ namespace B1Profile
 			throw new Exception("Entry with ID " + ID + " not found!");
 		}
 
-		public ref Entry GetEntryFromID(EntryID ID)
+		public ref Entry GetEntry(EntryID ID)
 		{
-			return ref GetEntryFromID(((uint)ID));
+			return ref GetEntry(((uint)ID));
 		}
 
 		private void LoadEntries(Reader reader)
@@ -428,17 +430,14 @@ namespace B1Profile
 
 		private unsafe void LoadEntryData()
 		{
-			NumGoldenKeys = GetNumGoldenKeysEntry().GetInt32Data();
+			NumGoldenKeys = GetEntry(EntryID.NumGoldenKeys).GetInt32Data();
+			NumGoldenKeysUsed = GetEntry(EntryID.NumGoldenKeysUsed).GetInt32Data();
 		}
 
 		private unsafe void SaveEntryData()
 		{
-			GetNumGoldenKeysEntry().SetInt32Data(NumGoldenKeys);
-		}
-
-		public ref Entry GetNumGoldenKeysEntry()
-		{
-			return ref GetEntryFromID(EntryID.NumGoldenKeys);
+			GetEntry(EntryID.NumGoldenKeys).SetInt32Data(NumGoldenKeys);
+			GetEntry(EntryID.NumGoldenKeysUsed).SetInt32Data(NumGoldenKeysUsed);
 		}
 	}
 }
