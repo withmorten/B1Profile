@@ -92,6 +92,9 @@ namespace B1ProfileGUI
 			ProfileFilePath = null;
 			ProfileDirty = false;
 
+			Icon = Icon.ExtractAssociatedIcon(AppDomain.CurrentDomain.FriendlyName);
+			Text = "Borderlands Profile Editor";
+
 			GoldenKeysTotalInput.Maximum = Profile.MaxGoldenKeysTotal;
 
 			GoldenKeysInput.Maximum = Profile.MaxGoldenKeys;
