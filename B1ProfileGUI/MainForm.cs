@@ -93,7 +93,7 @@ namespace B1ProfileGUI
 			ProfileDirty = false;
 
 			Icon = Icon.ExtractAssociatedIcon(AppDomain.CurrentDomain.FriendlyName);
-			Text = "Borderlands Profile Editor";
+			Text = "Borderlands Enhanced Profile Editor";
 
 			GoldenKeysTotalInput.Maximum = Profile.MaxGoldenKeysTotal;
 
@@ -157,7 +157,7 @@ namespace B1ProfileGUI
 
 			OpenFileDialog openFileDialog = new OpenFileDialog();
 
-			openFileDialog.Title = "Select Borderlands profile";
+			openFileDialog.Title = "Select Borderlands Enhanced profile";
 			openFileDialog.Filter = "profile|*.bin";
 			openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\My Games\\Borderlands Game of the Year\\Binaries\\SaveData";
 
@@ -178,7 +178,7 @@ namespace B1ProfileGUI
 
 		private void MainMenuAboutButton_Click(object sender, EventArgs e)
 		{
-			MessageBox.Show("Borderlands - Profile Editor\r\nby withmorten\r\n\r\nThanks to:\r\nPhilymaster (for the original Borderlands 2 Profile Editor)\r\nFeudalnate (for PackageIO)\r\ngibbed (for MiniLZO and his Borderlands 2 Save Editor)\r\n\r\nHover over \"Synced Mode\", the number next to it and \"Ignore\"\r\nfor additional info", "About", MessageBoxButtons.OK, MessageBoxIcon.Information);
+			MessageBox.Show(Text + "\r\nby withmorten\r\n\r\nThanks to:\r\nPhilymaster (for the original Borderlands 2 Profile Editor)\r\nFeudalnate (for PackageIO)\r\ngibbed (for MiniLZO)", "About", MessageBoxButtons.OK, MessageBoxIcon.Information);
 		}
 
 		private void MainMenuCloseButton_Click(object sender, EventArgs e)

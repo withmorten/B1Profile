@@ -1,5 +1,5 @@
 # B1Profile
-Borderlands profile.bin editor
+Borderlands Enhanced profile.bin editor
 
 In this repository you will find:
 

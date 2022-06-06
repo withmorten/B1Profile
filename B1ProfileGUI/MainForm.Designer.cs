@@ -55,7 +55,7 @@
             this.MainMenuCloseButton});
 			this.MainMenuBar.Location = new System.Drawing.Point(0, 0);
 			this.MainMenuBar.Name = "MainMenuBar";
-			this.MainMenuBar.Size = new System.Drawing.Size(336, 25);
+			this.MainMenuBar.Size = new System.Drawing.Size(357, 25);
 			this.MainMenuBar.TabIndex = 0;
 			this.MainMenuBar.Text = "Main Menu";
 			// 
@@ -130,7 +130,7 @@
 			// MaxGoldenKeysButton
 			// 
 			this.MaxGoldenKeysButton.Enabled = false;
-			this.MaxGoldenKeysButton.Location = new System.Drawing.Point(222, 97);
+			this.MaxGoldenKeysButton.Location = new System.Drawing.Point(240, 97);
 			this.MaxGoldenKeysButton.Name = "MaxGoldenKeysButton";
 			this.MaxGoldenKeysButton.Size = new System.Drawing.Size(100, 23);
 			this.MaxGoldenKeysButton.TabIndex = 4;
@@ -170,7 +170,7 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(336, 136);
+			this.ClientSize = new System.Drawing.Size(357, 136);
 			this.Controls.Add(this.MaxGoldenKeysButton);
 			this.Controls.Add(this.GoldenKeysTotalInput);
 			this.Controls.Add(this.GoldenKeysTotalLabel);
