@@ -159,7 +159,7 @@ namespace B1ProfileGUI
 
 			openFileDialog.Title = "Select Borderlands profile";
 			openFileDialog.Filter = "profile|*.bin";
-			openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+			openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\My Games\\Borderlands Game of the Year\\Binaries\\SaveData";
 
 			if (openFileDialog.ShowDialog() == DialogResult.OK)
 			{
