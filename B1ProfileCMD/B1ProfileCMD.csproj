@@ -35,8 +35,7 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="B1Profile, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="B1Profile">
       <HintPath>..\B1Profile\bin\Release\B1Profile.dll</HintPath>
     </Reference>
     <Reference Include="System" />
