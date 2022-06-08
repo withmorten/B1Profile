@@ -176,9 +176,6 @@ namespace B1Profile
 
 		public bool Load(string path, bool dumpUncompressed = false)
 		{
-			// for security reasons, create a backup of the file upon loading
-			File.Copy(path, path + ".bak", true);
-
 			// open input file
 			FileStream inputFile = File.OpenRead(path); // TODO exception handling
 			BinaryReader inputFileStream = new BinaryReader(inputFile);
@@ -227,6 +224,9 @@ namespace B1Profile
 
 		public bool Save(string path, bool dumpUncompressed = false)
 		{
+			// for security reasons, create a backup of the file before saving
+			File.Copy(path, path + ".bak", true);
+
 			// add our class data back to the entries
 			SaveEntryData();
 
